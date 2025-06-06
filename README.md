@@ -31,21 +31,5 @@ Classify four emotional states:
 
 4: Meditation
 
-How to Run
 
-Run rf.py or svm.py directly:
-
-python rf.py
-
-python svm.py
-
-Dependencies
-
-Python 3.8+
-
-scikit-learn
-
-pandas, numpy
-
-Optuna
 
