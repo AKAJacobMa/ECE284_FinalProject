@@ -19,6 +19,7 @@ Classify four emotional states:
 2: Stress
 3: Amusement
 4: Meditation
+
 How to Run
 
 Run rf.py or svm.py directly:
