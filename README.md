@@ -2,27 +2,58 @@
 
 Using [WESAD](https://archive.ics.uci.edu/dataset/465/wesad+wearable+stress+and+affect+detection) (Wearable Stress and Affect Detection) dataset.
 
-# Stress Detection from Wearable Signals using Classical Machine Learning
+# Emotion and Stress Detection Using Classical Machine Learning
 
-This repository contains code for a stress and emotion detection system using classical machine learning methods on physiological data from wearable devices.
+This repository presents a lightweight and interpretable machine learning pipeline for detecting emotional states using physiological signals collected from wearable devices. The project evaluates two classical ML models—Random Forest (RF) and Support Vector Machine (SVM)—on a 4-class classification task using the WESAD dataset.
 
-## Project Summary
+##  Motivation
 
-I use the **WESAD dataset**, collected from chest-worn RespiBAN sensors, to classify four emotional states:
-- Baseline
-- Stress
-- Amusement
-- Meditation
+Stress affects both physical and mental health. Early detection is crucial for prevention, but many people don’t recognize stress until it's too late. Wearable devices offer an opportunity to monitor stress in real time through physiological signals like heart rate, skin conductance, and respiration.
 
-Two machine learning models are implemented:
-- **Random Forest (RF)**
-- **Support Vector Machine (SVM)**
+The goal of this project is to develop an efficient, accurate, and interpretable stress detection system that is lightweight enough to be deployed on mobile or wearable devices.
 
-## Why Classical ML?
+##  Objectives
 
-Deep learning methods often require large datasets and are difficult to interpret. This project shows that **well-preprocessed features and balanced sampling** enable classical ML models to achieve **high accuracy** (RF ~99.9%) in stress detection.
+- Classify four emotional states: Baseline, Stress, Amusement, Meditation.
+- Compare two classical ML models (Random Forest and SVM).
+- Ensure the system is easy to interpret, accurate, and ready for real-world use.
 
-## 📁 File Structure
+##  Dataset
+
+**WESAD (Wearable Stress and Affect Detection)**  
+Collected from 15 subjects using a RespiBAN chest-worn device.
+
+### Signals Collected:
+- ECG (Electrocardiogram)
+- EDA (Electrodermal Activity)
+- EMG (Electromyography)
+- TEMP (Temperature)
+- RESP (Respiration)
+- ACC (Accelerometer)
+
+### Experimental States:
+- Baseline (calm)
+- Stress (arithmetic + public speaking)
+- Amusement (funny videos)
+- Meditation (rest/transition)
+
+> Note: This implementation uses only subject `S2` for demonstration.
+
+##  Methodology
+
+1. **Data Loading**: Parse raw `.pkl` files into NumPy arrays.
+2. **Preprocessing**:
+   - Remove incomplete/missing samples.
+   - Normalize features using `StandardScaler`.
+   - Balance data (equal samples per class).
+3. **Model Training**:
+   - Train SVM and RF with hyperparameter tuning using Optuna.
+4. **Evaluation**:
+   - Accuracy, Precision, Recall, F1-score (per class)
+   - Confusion matrices
+   - Per-class performance plots
+
+##  File Structure
 
 ```bash
 .
@@ -33,4 +64,9 @@ Deep learning methods often require large datasets and are difficult to interpre
 ├── training_records/           # Auto-saved confusion matrix and params (generated after training)
 └── WESAD/                      # Folder to place WESAD dataset (not included here)
 
+
+##  Requirements
+
+```bash
+pip install numpy pandas scikit-learn matplotlib seaborn optuna
 
