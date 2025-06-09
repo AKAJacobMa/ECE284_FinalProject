@@ -65,8 +65,4 @@ Collected from 15 subjects using a RespiBAN chest-worn device.
 └── WESAD/                      # Folder to place WESAD dataset (not included here)
 
 
-##  Requirements
-
-```bash
-pip install numpy pandas scikit-learn matplotlib seaborn optuna
 
