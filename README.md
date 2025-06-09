@@ -57,12 +57,12 @@ Collected from 15 subjects using a RespiBAN chest-worn device.
 
 ```bash
 .
-├── rf.py                       # Random Forest training and evaluation
-├── svm.py                      # SVM training and evaluation
-├── feature_visualization.ipynb # Optional notebook for feature plotting
+├── rf.py                        # Random Forest training and evaluation
+├── svm.py                       # SVM training and evaluation
+├── feature_visualization.ipynb  # Optional notebook for feature plotting
 ├── training_visualization.ipynb # Accuracy and metrics visualization
-├── training_records/           # Auto-saved confusion matrix and params (generated after training)
-└── Visualization/              # Generated Visualization Images
+├── training_records/            # Auto-saved confusion matrix and params (generated after training)
+└── Visualization/               # Generated Visualization Images
 
 
 
