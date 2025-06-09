@@ -62,7 +62,7 @@ Collected from 15 subjects using a RespiBAN chest-worn device.
 ├── feature_visualization.ipynb # Optional notebook for feature plotting
 ├── training_visualization.ipynb # Accuracy and metrics visualization
 ├── training_records/           # Auto-saved confusion matrix and params (generated after training)
-└── WESAD/                      # Folder to place WESAD dataset (not included here)
+└── Visualization/              # Generated Visualization Images
 
 
 
